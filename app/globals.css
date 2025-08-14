@@ -1,4 +1,7 @@
 @import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
   --background: #ffffff;
@@ -14,10 +17,30 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: hsl(0, 0%, 100%);
     --foreground: #ededed;
   }
 }
+
+@layer utilities {
+  .bg-primary {
+    background-color: var(--color-background);
+  }
+
+  .text-primary {
+    color: var(--color-foreground);
+  }
+
+  .font-sans {
+    font-family: var(--font-sans);
+  }
+
+  .font-mono {
+    font-family: var(--font-mono);
+  }
+}
+
+
 
 body {
   background: var(--background);
