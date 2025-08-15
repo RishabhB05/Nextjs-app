@@ -9,6 +9,7 @@ const Home = async ({ searchParams }: { searchParams: { query?: string } }) => {
 
     const posts = [
       {
+        id: 1,
         createdAt: new Date(),
         views: 55,
         author: {
@@ -22,6 +23,7 @@ const Home = async ({ searchParams }: { searchParams: { query?: string } }) => {
         title:"Elden Ring",
       },
       {
+        id: 2,
         createdAt: new Date("2023-01-02"),
         views: 75,
         author: {
@@ -34,6 +36,7 @@ const Home = async ({ searchParams }: { searchParams: { query?: string } }) => {
         title:"Arkham Knight",
       },
       {
+        id: 3,
         createdAt: new Date("2023-01-03"),
         views: 100,
         author: {
@@ -86,8 +89,8 @@ const Home = async ({ searchParams }: { searchParams: { query?: string } }) => {
             //   </li>
             // ))
             
-            posts.map((post: StartupCardType )=>(
-              <StartupCard key={post?._id} post = {post} />
+            posts.map((post: any )=>(
+              <StartupCard key={post?.id} post = {post} />
             ))
 
           ) : (

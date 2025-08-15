@@ -6,13 +6,13 @@ import { redirect } from "next/navigation"; // Fixed import
 const Navbar = async () => {
   const session = await auth();
   return (
-    <header className="px-5 py-4 bg-white  font-work-sans">
+    <header className="px-5 py-2 bg-white  font-work-sans">
       <nav className="flex justify-between items-center">
         <Link href="/">
           <Image src="/logos.png" alt="logo" width={125} height={25} />
         </Link>
 
-        <div className="flex items-center gap-5 text-black">
+        <div className="flex text-lg font-semibold items-center gap-5 text-black">
           {session && session?.user ? (
             <>
               <Link href="/startup/create">
