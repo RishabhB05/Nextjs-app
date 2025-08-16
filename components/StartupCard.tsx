@@ -9,16 +9,16 @@ import { Button } from "@/components/ui/button";
 export type StartupTypeCard = Omit<Startup, "author"> & { author?: Author };
 
 const StartupCard = ({ post }: { post: StartupTypeCard }) => {
-  const {
-    createdAt: _createdAt,
-    views,
-    author,
-    title,
-    category,
-    id: _id,
-    image,
-    description,
-  } = post;
+const {
+  _createdAt,  // Changed from createdAt
+  views,
+  author,
+  title,
+  category,
+  _id,         // Changed from id
+  image,
+  description,
+} = post;
 
   return (
     <li className="bg-white  border-[5px] border-black py-6 px-5  rounded-[22px] shadow-200 hover:border-yellow-300 transition-all duration-200 hover:shadow-300 hover:bg-yellow-100 group">
