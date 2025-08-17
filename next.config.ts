@@ -1,16 +1,25 @@
 import type { NextConfig } from "next";
 
-const nextConfig: NextConfig = {
-  /* config options here */
-    images: {
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  images: {
     dangerouslyAllowSVG: true,
     remotePatterns: [
       {
-        protocol: "https",
-        hostname: "*",
+        protocol: 'https',
+        hostname: '**', // More secure than single *
       },
     ],
   },
-};
+  experimental: {
+    // ppr: true, // Commented out - only available in canary builds
+    // 'after' is not a valid experimental flag (removed)
+  },
+  devIndicators: {
+    buildActivity: true,
+    buildActivityPosition: 'bottom-left',
+    // appIsrStatus is not a valid option (removed)
+  }
+}
 
-export default nextConfig;
+module.exports = nextConfig
