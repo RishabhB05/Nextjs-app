@@ -15,12 +15,13 @@ const Home = async ({ searchParams }: { searchParams: { query?: string } }) => {
       const { data: posts } = await sanityFetch({ query: STARTUPS_QUERY, params });
 
 
+
   return (
     <>
       <section className="w-full min-h-[530px] bg-yellow-500 bg-[repeating-linear-gradient(to_right,white,white_0px,transparent_1px,transparent_60px)] flex justify-center items-center flex-col py-10 px-6">
         
-        <div className='bg-[#EE2B69] p-3 rounded-md '>
-            <div className="font-work-sans font-bold uppercase text-[17px] leading-[24px] tracking-[0.06em] w-[231px] h-[24px] flex items-center">
+        <div className=''>
+            <div className="bg-[#EE2B69] px-6 py-3 font-work-sans font-bold rounded-sm uppercase relative before:content-[''] before:absolute before:top-2 before:left-2 before:border-t-[10px] before:border-t-black before:border-r-[10px] before:border-r-transparent after:content-[''] after:absolute after:bottom-2 after:right-2 after:border-b-[10px] after:border-b-black after:border-l-[10px] after:border-l-transparent">
               PITCH, VOTE, AND GROW
             </div>
           </div>
